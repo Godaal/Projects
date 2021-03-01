@@ -1,0 +1,155 @@
+﻿@model MovieInfo.Models.Movie
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<h2 class="text-info">Add Movie</h2>
+<form method="post" enctype="multipart/form-data" action="Create">
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Title"></label>
+        </div>
+        <div class="col-4">
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Genre"></label>
+        </div>
+        <div class="col-4">
+            <input asp-for="Genre" class="form-control" />
+            <span asp-validation-for="Genre" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Runtime"></label>
+        </div>
+        <div class="col-4">
+            <input asp-for="Runtime" class="form-control" />
+            <span asp-validation-for="Runtime" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Year"></label>
+        </div>
+        <div class="col-4">
+            <input asp-for="Year" class="form-control" />
+            <span asp-validation-for="Year" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Director"></label>
+        </div>
+        <div class="col-4">
+            <input asp-for="Director" class="form-control" />
+            <span asp-validation-for="Director" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Stars"></label>
+        </div>
+        <div class="col-4">
+            <input asp-for="Stars" class="form-control" />
+            <span asp-validation-for="Stars" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Trailer"></label>
+        </div>
+        <div class="col-4">
+            <input asp-for="Trailer" class="form-control" />
+            <span asp-validation-for="Trailer" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Country"></label>
+        </div>
+        <div class="col-4">
+            <input asp-for="Country" class="form-control" />
+            <span asp-validation-for="Country" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Budget"></label> in $
+        </div>
+        <div class="col-4">
+            <input asp-for="Budget" class="form-control" />
+            <span asp-validation-for="Budget" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Story"></label>
+        </div>
+        <div class="col-4">
+            <textarea asp-for="Story" class="form-control"> </textarea>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="ImagePath"></label>
+        </div>
+        <div class="col-4">
+            <input type="file" name="files" class="form-control" />
+        </div>
+    </div>
+
+    <br />
+    <div class="form-group">
+        <input type="submit" class="btn btn-primary" value="Create" />
+        <a asp-action="Index" class="btn btn-success">Back</a>
+    </div>
+</form>
+
+<div id="demo" class="carousel slide" data-ride="carousel" style="width:500px; height:600px; margin-top:-700px; float:right;">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <p style="font-size:40px;">Comming soon</p>
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../images/soon13.jpg" alt="Warcraft" style="width:500px; height:500px;">
+        </div>
+        <div class="carousel-item">
+            <img src="../images/soon2.jpg" alt="Star Wars" style="width:500px; height:500px;">
+        </div>
+        <div class="carousel-item">
+            <img src="../images/soon3.jpg" alt="Godzilla" style="width:500px; height:500px;">
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+

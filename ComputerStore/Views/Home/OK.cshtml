@@ -1,0 +1,7 @@
+﻿@{ 
+    ViewBag.Title = "OK"; 
+    }
+    <section>
+        @if (TempData["message"] != null)
+        {<h3><pre>@TempData["message"]</pre></h3>}
+    </section>

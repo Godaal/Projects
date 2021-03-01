@@ -1,0 +1,62 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Вход";
+}
+<section class="contacts">
+    <header>
+        <h1>@ViewData["Title"]</h1> <h3>Използвайте локален акаунт за влизане</h3>
+    </header>
+    <article class="one-column">
+        <form id="account" method="post">
+            <div asp-validation-summary="All" class="validation"></div>
+            <table style="border-spacing:0px;">
+                <tr>
+                    <td style="width:50px;height:10px;">
+                        <label asp-for="Input.Email" class="label"></label>
+                    </td>
+                    <td style="width:210px;height:10px;">
+                        <input asp-for="Input.Email" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:50px;height:1px; "></td>
+                    <td style="width:210px;height:1px; ">
+                        <span asp-validation-for="Input.Email"
+                              class="validation"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:50px;height:10px;">
+                        <label asp-for="Input.Password" class="label"></label>
+                    </td>
+                    <td style="width:210px;height:10px;">
+                        <input asp-for="Input.Password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:50px;height:1px; "></td>
+                    <td style="width:210px;height:1px; ">
+                        <span asp-validation-for="Input.Password"
+                              class="validation"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Вход" class="button-submit"
+                               style="margin:0 150px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl"> Регистрирайте се като нов потребител</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        @section Scripts {
+            <partial name="_ValidationScriptsPartial" />
+        }
+    </article>
+</section>

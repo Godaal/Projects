@@ -1,0 +1,34 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Lab5.Models.Product
+    <div class="container">
+        <section class="contacts">
+            <article class="one-column">
+                <table>
+                    <thead>
+                        <tr style="height:50px;">
+                            <th colspan="2"><h1>@Model.ProductName </h1></th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>
+                            <img src="/@Model.ImagePath" asp-append-version="true" alt="@Model.ProductName" style="width:200px; border: solid;margin-left:5px;" />
+                        </td>
+                        <td style="vertical-align:top;text-align:center; margin-left:20px; ">
+                            @Model.Description<br />
+                            <b>
+                                <br /><label asp-for="@Model.UnitPrice" class="label"></label>
+                            </b> @Model.UnitPrice.GetValueOrDefault().ToString("0.00") лв.
+                            <b><br />
+                                <br /><label asp-for="@Model.ProductID" class="label"></label>
+                            </b> @Model.ProductID
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <br /> <a asp-action="Index">Назад към списъка с продукти</a>
+                        </td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+    </div>

@@ -1,0 +1,38 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/content/Lab.css" rel="stylesheet" />
+    <title>@ViewBag.Title - Tech Kingdom</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <aside><img src="~/images/img02.png" style="height:71px;width:100px;float: left;border: 1px solid #00046c;margin-top:1px;margin-right:20px;" /><p>Tech Kingdom</p></aside>
+            <nav>
+                <ul>
+                    <li>
+                        <a asp-controller="Home" asp-action="Index">Начало</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Home" asp-action="ForUs">За нас</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Home" asp-action="Contacts">Контакти</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Home" asp-action="Orders">Поръчки</a>
+                    </li>
+                    <li>
+                        <a asp-controller="ProductList" asp-action="Index">Продукти</a>
+                    </li>
+                    <partial name="_LoginPartial" />
+                </ul>
+            </nav>
+        </header> @RenderBody() <footer><p>&copy; @DateTime.Now.Year - Tech Kingdom</p></footer>
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

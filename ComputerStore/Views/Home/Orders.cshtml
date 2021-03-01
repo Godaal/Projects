@@ -1,0 +1,105 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Lab5.Models.Order
+<section class="orders">
+    <header>
+        <h1>@ViewBag.Title</h1>
+        <h3>Моля, попълнете формата!</h3>
+    </header>
+    <article class="give">
+        <form asp-action="Logins" asp-controller="Home">
+            <div asp-validation-summary="ModelOnly" class="validation"></div>
+            <table style="border-spacing:0px;">
+                <tr>
+                    <td style="width:50px;height:10px;">
+                        <label asp-for="FirstName" class="label"></label>
+                    </td>
+                    <td style="width:210px;height:10px;">
+                        <input asp-for="FirstName" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:50px;height:1px; "></td>
+                    <td style="width:210px;height:1px; ">
+                        <span asp-validation-for="FirstName" class="validation"> </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:50px;height:10px;">
+                        <label asp-for="FamilyName" class="label"></label>
+                    </td>
+                    <td style="width:210px;height:10px;">
+                        <input asp-for="FamilyName" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:50px;height:1px; "></td>
+                    <td style="width:210px;height:1px; ">
+                        <span asp-validation-for="FamilyName" class="validation"> </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:50px;height:10px;">
+                        <label asp-for="Email" class="label"></label>
+                    </td>
+                    <td style="width:210px;height:10px;">
+                        <input asp-for="Email" />
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:50px;height:1px; "></td>
+                    <td style="width:210px;height:1px; ">
+                        <span asp-validation-for="Email" class="validation"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:50px;height:10px;">
+                        <label asp-for="Product" class="label"></label>
+                    </td>
+                    <td style="width:210px;height:10px;">
+                        <select asp-for="Product" asp-items="Model.Products"> <option value="">Избери</option> </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:50px;height:1px; "></td>
+                    <td style="width:210px;height:1px; ">
+                        <span asp-validation-for="Product" class="validation"> </span>
+                    </td>
+                    </tr>
+                <tr>
+                    <td style="width:50px;height:10px;">
+                        <label asp-for="Deliever" class="label"></label>
+                    </td>
+                    <td style="width:210px;height:10px;">
+                        <select asp-for="Deliever" asp-items="Model.Delievers"> <option value="">Избери</option> </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:50px;height:1px; "></td>
+                    <td style="width:210px;height:1px; ">
+                        <span asp-validation-for="Deliever" class="validation"> </span>
+                    </td>
+                </tr>
+                <tr><td colspan="2" style="height: 1px"></td></tr>
+                <tr>
+                    <td style="width:50px;height:10px">
+                        <label asp-for="Address"></label>
+                    </td>
+                <tr>
+                    <td colspan="2" style="height:10px">
+                        <textarea asp-for="Address"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width:210px;height:10px;">
+                        <span asp-validation-for="Address" class="validation"> </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Поръчай" class="button-submit" style="margin:0 150px" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </article>
+</section>

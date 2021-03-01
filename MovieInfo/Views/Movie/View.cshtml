@@ -1,0 +1,136 @@
+﻿@model MovieInfo.Models.Movie
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<h2 class="text-info">View Movie</h2>
+<form>
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Title"></label>
+        </div>
+        <div class="col-4">
+            <input disabled="disabled" asp-for="Title" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Genre"></label>
+        </div>
+        <div class="col-4">
+            <input disabled="disabled" asp-for="Genre" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Runtime"></label>
+        </div>
+        <div class="col-4">
+            <input disabled="disabled" asp-for="Runtime" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Year"></label>
+        </div>
+        <div class="col-4">
+            <input disabled="disabled" asp-for="Year" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Director"></label>
+        </div>
+        <div class="col-4">
+            <input disabled="disabled" asp-for="Director" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Stars"></label>
+        </div>
+        <div class="col-4">
+            <input disabled="disabled" asp-for="Stars" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Trailer"></label>
+        </div>
+        <div class="col-4">
+            <input disabled="disabled" asp-for="Trailer" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Country"></label>
+        </div>
+        <div class="col-4">
+            <input disabled="disabled" asp-for="Country" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Budget"></label> in $
+        </div>
+        <div class="col-4">
+            <input disabled="disabled" asp-for="Budget" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-2">
+            <label asp-for="Story"></label>
+        </div>
+        <div class="col-4">
+            <textarea disabled="disabled" asp-for="Story" class="form-control"></textarea>
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <a asp-action="Index" class="btn btn-success">Back</a>
+    </div>
+</form>
+
+<div id="demo" class="carousel slide" data-ride="carousel" style="width:500px; height:600px; margin-top:-660px; float:right;">
+
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <p style="font-size:40px;">Comming soon</p>
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../images/soon4.jpg" alt="Warcraft" style="width:500px; height:500px;">
+        </div>
+        <div class="carousel-item">
+            <img src="../images/soon5.jpg" alt="Star Wars" style="width:500px; height:500px;">
+        </div>
+        <div class="carousel-item">
+            <img src="../images/soon6.jpg" alt="Godzilla" style="width:500px; height:500px;">
+        </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+
+
